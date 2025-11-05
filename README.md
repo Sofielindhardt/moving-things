@@ -1,23 +1,5 @@
 
 
-Before we can use JavaScript to play the sound named `movement_sound.m4a` on keystroke up/down/left/right, you first need to grab it and save a reference to it in a variable named `movementSound`.
-
-```javascript
-const ? = document.getElementById("?");
-```
-
-Next implement a function named `playSoundOnMovement` outside the addeventListener.
-
-```javascript
-function ? {
-
-
-}
-```
-
-Inside the `playSoundOnMovement` function, set the `currentTime` property of the `movementSound` variable to `0`, which will explicitly set the playback position to the beginning of the sound file and finally set the `movementSound` variable to play the sound.
-
-
 Finally update all 4 functions [`moveDodgerUp()`, `moveDodgerDown()`, `moveDodgerleft()`, `moveDodgerRight()`] so it calls the function `playSoundOnMovement()` each time you click on the keystroke up/down/left/right.
 
 ### Exercise 5 -  Implement a sound function that plays music when you hit one of the edges of the container

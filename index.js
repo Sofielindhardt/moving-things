@@ -1,4 +1,5 @@
 const dodger = document.getElementById("dodger");
+const movementSound = document.getElementById("playSoundOnMovement");
 
 function moveDodgerLeft() {
   const leftNumbers = dodger.style.left.replace("px", "");
@@ -6,6 +7,7 @@ function moveDodgerLeft() {
 
   if (left > 0) {
     dodger.style.left = `${left - 1}px`;
+    playMovementSound();
   }
 }
 
@@ -16,6 +18,7 @@ function moveDodgerRight() {
   // Dodger er 40px bred, containeren er 400px → max position = 360px
   if (left < 360) {
     dodger.style.left = `${left + 1}px`;
+    playMovementSound();
   }
 }
 
@@ -26,6 +29,7 @@ function moveDodgerUp() {
   // Dodger er 20px høj, containeren 400px → max position = 380px
   if (bottom < 380) {
     dodger.style.bottom = `${bottom + 1}px`;
+    playMovementSound();
   }
 }
 
@@ -35,6 +39,7 @@ function moveDodgerDown() {
 
   if (bottom > 0) {
     dodger.style.bottom = `${bottom - 1}px`;
+    playMovementSound();
   }
 }
 
@@ -55,8 +60,6 @@ document.addEventListener("keydown", function (e) {
     moveDodgerDown();
   }
 });
-
-const movementSound = document.getElementById("movementSound");
 
 function playMovementSound() {
   movementSound.currentTime = 0;
