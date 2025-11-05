@@ -41,11 +41,24 @@ function moveDodgerDown() {
 document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowLeft") {
     moveDodgerLeft();
-  } else if (e.key === "ArrowRight") {
+  }
+
+  if (e.key === "ArrowRight") {
     moveDodgerRight();
-  } else if (e.key === "ArrowUp") {
+  }
+
+  if (e.key === "ArrowUp") {
     moveDodgerUp();
-  } else if (e.key === "ArrowDown") {
+  }
+
+  if (e.key === "ArrowDown") {
     moveDodgerDown();
   }
 });
+
+const movementSound = document.getElementById("movementSound");
+
+function playMovementSound() {
+  movementSound.currentTime = 0;
+  movementSound.play();
+}
