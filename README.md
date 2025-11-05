@@ -240,7 +240,9 @@ Now try moving the dodger past the left edge. No can do!
 
 Copy the final cod
 e into `index.js` and run the tests. You should now have the
-first one passing.
+first one passing. 
+-----------------------
+
 
 ## Exercise
 Now it's your turn. Just remember to replace the question mark in the code with your own.
